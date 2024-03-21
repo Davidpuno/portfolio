@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Webcam</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body style="background-color:	#e5bbd1; font-family:cursive;">
+  <div class="header">
+    <h2>Human Computer Interaction Webcam</h2>
+  </div>
+  <center>
+    <video id="webcam" width="640" height="480"></video>
+  </center>
+  <center>
+    <button class="button" onclick="turnOff()">Turn Off</button>
+    <button class="button" onclick="turnOn()">Turn On</button>
+  </center>
+  <center>
+    <h1 id='webcamoff'></h1>
+  </center>
+  <script>
+    var webcamStream;
+
+    function initWebcam() {
+      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ video: true }).then(function (stream) {
+          var webcam = document.getElementById('webcam');
+          webcam.srcObject = stream;
+          webcam.play();
+          webcamStream = stream;
+        });
+      }
+    }
+
+    function turnOff() {
+      if (webcamStream) {
+        webcamStream.getTracks().forEach(function (track) {
+          track.stop();
+        });
+        document.getElementById('webcam').srcObject = null;
+        var msg = "Your cam is turned off!";
+        document.getElementById('webcamoff').innerHTML = msg;
+        webcamStream = null;
+      }
+    }
+
+    function turnOn() {
+      if (!webcamStream) {
+        initWebcam();
+        document.getElementById('webcamoff').innerHTML = "";
+      }
+    }
+
+    // Initialize webcam on page load
+    window.addEventListener('load', initWebcam);
+  </script>
+
+  <center>
+    <a href="homepage.html" class="button">HOME</a>
+  </center>
+</body>
+
+<style>
+  .header {
+    padding: 30px;
+    text-align: center;
+    background: #39bbf7;
+    color: whitesmoke;
+  }
+
+  .header h2 {
+    font-size: 40px;
+  }
+
+  .button {
+    background-color: #3c8aff;
+    border: none;
+    color: whitesmoke;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+</style>
+
+</html>

@@ -1,0 +1,135 @@
+/* Modern styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #080808;
+    color: #fff;
+}
+
+header {
+    background-color: #000; /* Set the background color to black */
+    color: #fff; /* Set the text color to white */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #666;
+}
+
+section {
+    padding: 40px;
+}
+
+footer {
+    background-color: #000; /* Set the background color to black */
+    color: #fff; /* Set the text color to white */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.about-container {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Add some space between sections */
+    color: black; /* Set font color to black */
+}
+
+/* Optional: Adjusting text alignment and font size */
+.about-container p {
+    text-align: justify;
+    font-size: 16px;
+}
+
+/* Styling for contact section */
+#contact {
+    margin-top: 20px; /* Add some space between sections */
+}
+
+/* Styling for contact information */
+#contact ul {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0;
+}
+
+#contact ul li {
+    margin-bottom: 10px; /* Add space between each contact info */
+}
+
+/* Styling for icons */
+#contact ul li i {
+    margin-right: 5px; /* Add space between icon and text */
+    font-size: 20px; /* Adjust icon size */
+    vertical-align: middle; /* Align icons vertically with text */
+}
+
+#certificates {
+    margin-top: 20px; /* Add some space between sections */
+}
+
+.certificate {
+    margin-bottom: 20px; /* Add space between certificates */
+}
+
+.certificate img {
+    width: 100%; /* Make sure the image fills its container */
+    border-radius: 10px; /* Add some rounded corners to the image */
+}
+
+nav ul li a {
+    color: #fff; /* Change font color to white */
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ccc; /* Change text color to a lighter shade of gray on hover */
+}
+
+nav ul li a:hover {
+    color: #ccc; /* Change text color to a lighter shade of gray on hover */
+    text-decoration: underline; /* Add underline effect on hover */
+}
+
+#certificates {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.certificate {
+    margin: 0 10px 20px; /* Add margin around each certificate */
+}
+
+.certificate img {
+    width: 200px; /* Adjust the width of the certificate images */
+    height: 150px; /* Set a standard height for the certificate images */
+    display: block; /* Ensure images are displayed as block elements */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
